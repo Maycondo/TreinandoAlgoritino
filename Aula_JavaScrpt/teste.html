@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+</head>
+    <style type="text/css">
+        .filho{
+            width: 500px;
+            height: 500px;
+            border: 1px solid black;
+        }
+    </style>
+<body>
+    <div class="Pai">
+
+      <div class="filho">
+
+      </div>
+      <div class="filho">
+
+      </div>
+      <div class="filho">
+        <div class="filho-do-filho"></div>
+      </div>
+      <div class="filho">
+        <div class="filho-do-filho animar"></div>
+      </div>
+      <div class="filho">
+
+      </div>
+      <div class="filho"
+      ></div>
+
+    </div>
+</body>
+<script>
+
+    $(
+        function() {
+
+            $('.pai .filho').each(function() {
+                let obj = $(this).find('.filho-do-filho');
+                if (obj.length > 0){
+                    console.log("Encontrei um filho do pai");
+                    if (obj.hasClass('animar')){
+                        // Chegamos no final da logica
+                        obj.animate({width:'100px'}, 3000,function() {
+                            console.log( "Animation complete." );
+                        });
+                    }
+                }
+            })
+        }
+    )
+</script>
+</html>
