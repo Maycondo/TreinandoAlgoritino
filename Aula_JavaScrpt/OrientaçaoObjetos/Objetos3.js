@@ -20,10 +20,9 @@ function Animal(especie, name) {
     this.name = name;
 }
 
-let a1 = new Animal("Gato: " , "Fiona");
-let a2 = new Animal("Cachorro: " , "Topi");
+let a1 = new Animal("Gato:" , "Fiona");
+let a2 = new Animal("Cachorro:" , "Topi");
 
 console.log(a1.especie, a1.name)
 console.log(a2.especie, a2.name)
-
 
