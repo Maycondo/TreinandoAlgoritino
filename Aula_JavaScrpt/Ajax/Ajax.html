@@ -8,7 +8,10 @@
 </head>
     <body>
         <script>
-            let request = new XMLHttpRequest();
+
+            setTimeout(function(){
+                
+                let request = new XMLHttpRequest();
             request.open("GET", "https://api.github.com/users/diego3g", true);
 
             request.onload = function (){
@@ -25,6 +28,8 @@
 
                 request.send()
             }
+            },2000)
+
         </script>
     </body>
 </html>
