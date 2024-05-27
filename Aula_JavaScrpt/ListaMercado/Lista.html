@@ -3,10 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
       <head>
           <style>
+            
+             body{
+              font-family: 'Roboto', sans-serif;
+            }
+
             header{
                 background-color: #5a71bb;
                 text-align: center;
@@ -24,6 +32,30 @@
                 flex: 1;
                 padding: 10px;
               }
+
+              .lista-produto-sigle{
+                padding: 10px 0;
+                border-bottom: 1px solid #ccc;
+                display: flex;
+              }
+
+              .lista-produto-sigle h3{
+                flex: 1;
+                padding: 0 20px;
+              }
+
+              h3.price-produto{
+                text-align: right;
+                font-size: 8px 10px;
+              }
+
+              h3.price-produto > span{
+                border-radius: 10px;
+                background-color: #5a71bb;
+                padding: 8px 10px;
+                color:  white;
+              }
+
          </style>
       </head>
       
@@ -33,28 +65,28 @@
            </header>
            <div class="lista-cadastro">
               <input type="text" placeholder="Nome do produto..." name="nome_produto">
-              <input type="text" placeholder="Valor do produto..." name="Valor_produto">
+              <input type="number" placeholder="Valor do produto..." name="price">
               <input type="submit" name="acao" value="Cadastra">
            </div>
 
            <div class="lista-produtos">
               <div class="lista-produtos-single">
-                <h2>RedBull</h2>
-                <span>R$20,00</span>
+                <h3>RedBull</h3>
+                <h3 class="price-produto"><span>R$20,00</span></h3>
               </div>
-
-              <div class="lista-produtos-single">
-                <h2>RedBull</h2>
-                <span>R$20,00</span>
-              </div>
-           </div>
-
-           <div class="lista-produtos-single">
-            <h2>RedBull</h2>
-            <span>R$20,00</span>
           </div>
+
+
+
+    <div class="soma-produto">
+      <h1>TOTAL: 100$ REAIS</h1>
+    </div>
+        
+     <button name="limpar">
+      limpar
+     </button>
           
-           <script>
+           <script src="supermercado.js">
 
            </script>
     </body>

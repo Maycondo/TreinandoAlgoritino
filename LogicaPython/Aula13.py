@@ -2,7 +2,7 @@
 
 
 
-contador = 0
+contador = 1
 
 while contador <= 10:
     print(contador)

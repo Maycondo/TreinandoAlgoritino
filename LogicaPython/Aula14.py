@@ -1,17 +1,17 @@
 
+
+class Perso:
+
+    def __init__(self , name , surname , age):
+        self.name = name 
+        self.surname = surname
+        self.age = age
+
+
     
-
-def perso(name ,surname):
-    name = name 
-    surname = surname
-
-    return f"Hello! My name is {name} {surname}"
+    def falndo(self):
+        return f'Usuario de nome: {self.name} {self.surname} de idade {self.ge} esta falando no sistema de reconhecimento de voz!'
 
 
-p1 = perso("Maycon", "douglas")
-p2 = perso("Beatriz", "serena")
-
-print(p1)
-print("---" * 10)
-print(p2)
-
+    def descont(self):
+        return '!'
