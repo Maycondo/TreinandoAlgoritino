@@ -32,19 +32,31 @@
             </div>
     </div>
         <script>
+            
             let elementos = document.querySelectorAll('.player-options div > img');
             let playerOpt = "";
+            let inimigoOpt = "";
+
+            function resetInimigo(){
+                const enemyOptions = document.querySelectorAll('enemy-options div');
+
+                for(let i = 0; i < enemyOptions.length; i++){
+                    if(i == rand){
+                        enemyOptions[i].style.opacity = 0.3;
+                    }
+                };
+            }
 
             function inimigoJogar(){
                 let rand = Math.floor(Math.random()*3);
 
 
                 const enemyOptions = document.querySelectorAll('enemy-options div');
-
+                resetInimigo()
                 for(let i = 0; i < enemyOptions.length; i++){
-                    if(i == rand){
-                        enemyOptions[i].style.opacity = 1;
-                    }
+                    enemyOptions[i].style.opacity = 0;
+                    inimigoOpt = enemyOptions[i].childNodes[0].getAttribute("opt")
+
                 };
             }
 
