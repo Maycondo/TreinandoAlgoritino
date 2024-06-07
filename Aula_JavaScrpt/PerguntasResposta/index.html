@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perguntas & Respostas</title>
+</head>
+<body>
+    <div class="title">
+        <h1>Perguntas & Respostas</h1>
+    </div>
+
+
+    <form class="pergunta">
+        <span>Opcão 1</span>
+        <input type="radio" name="pergunta1" value="correta">
+        <br>
+        <span>Opcão 2</span>
+        <input type="radio" name="pergunta1" value="incorreta">
+        <br>
+        <span>Opcão 3</span>
+        <input type="radio" name="pergunta1" value="incorreta">
+        <br>
+    </form>
+
+    <div class="title">
+        <h1>Perguntas & Respostas</h1>
+    </div>
+
+
+    <form class="pergunta">
+        <span>Opcão 1</span>
+        <input type="radio" name="pergunta1" value="correta">
+        <br>
+        <span>Opcão 2</span>
+        <input type="radio" name="pergunta1" value="incorreta">
+        <br>
+        <span>Opcão 3</span>
+        <input type="radio" name="pergunta1" value="incorreta">
+        <br>
+    </form>
+
+    <div class="title">
+        <h1>Perguntas & Respostas</h1>
+    </div>
+
+
+    <form class="pergunta">
+        <span>Opcão 1</span>
+        <input type="radio" name="pergunta1" value="correta">
+        <br>
+        <span>Opcão 2</span>
+        <input type="radio" name="pergunta1" value="incorreta">
+        <br>
+        <span>Opcão 3</span>
+        <input type="radio" name="pergunta1" value="incorreta">
+        <br>
+    </form>
+
+
+    <script>
+
+        let elementos = document.querySelectorAll('[type=radio]')
+
+
+        for(let i = 0; i < elementos.length; i++){
+            elementos[i].addEventListener('change', function (e){
+                let marcado = e.target.value;
+                if(marcado == "correta"){
+                    let el = e.target.previousElementSibling.style.backgroundColor = "green"
+                }else if(marcado == "incorreta"){
+                    let el = e.target.previousElementSibling.style.backgroundColor = "red"
+                }
+            })
+        }
+    </script>
+</body>
+</html>

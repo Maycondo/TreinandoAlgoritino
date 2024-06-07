@@ -18,6 +18,7 @@
             }
         </style>
         <h1 style="text-align: center;">Pedra, papel ou tesoura!</h1>
+        <dev class="vercedor"></dev>
         <hr>
         <div class="align">
             <div class="player-options">
@@ -32,10 +33,28 @@
             </div>
     </div>
         <script>
-            
+
             let elementos = document.querySelectorAll('.player-options div > img');
             let playerOpt = "";
             let inimigoOpt = "";
+
+
+            function validarVitoria () {
+
+                let vercedor = document.querySelector('.vercedor')
+
+
+                if(playerOpt == 'papel'){
+
+                    if(inimigoOpt == 'papel '){   
+                       vercedor.innerHTML = 'O jogo foi empatado';
+                    }else if(inimigoOpt == 'tesoura'){
+                       vercedor.innerHTML = 'O inimigo ganhou'
+                    }else if(inimigoOpt == 'pedra'){
+                        vercedor.innerHTML = 'Você ganhou'
+                    }
+                }
+            }
 
             function resetInimigo(){
                 const enemyOptions = document.querySelectorAll('enemy-options div');
@@ -77,6 +96,9 @@
                    // alert(playerOpt);
                 });
             }
+
+
+            validarVitoria()
 
         </script>
 
